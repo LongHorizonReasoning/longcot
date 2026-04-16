@@ -1,0 +1,16 @@
+# OpenRouter - Kimi K2 Thinking
+provider: "openrouter"
+api_key: ${OPENROUTER_API_KEY}
+model: "moonshotai/kimi-k2-thinking"
+timeout: 10000.0
+
+headers:
+  HTTP-Referer: "http://localhost"
+  X-Title: "lhr-dataset"
+
+num_workers: 8
+max_retries: 2
+
+llm_kwargs:
+  max_completion_tokens: 125000
+  reasoning_effort: "high"

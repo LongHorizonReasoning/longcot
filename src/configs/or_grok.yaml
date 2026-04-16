@@ -1,0 +1,15 @@
+# OpenRouter - Grok 4.1 Fast
+provider: "openrouter"
+api_key: ${OPENROUTER_API_KEY}
+model: "x-ai/grok-4.1-fast"
+timeout: 10000.0
+
+headers:
+  HTTP-Referer: "http://localhost"
+  X-Title: "lhr-dataset"
+
+num_workers: 8
+max_retries: 2
+
+llm_kwargs:
+  reasoning_effort: "high"

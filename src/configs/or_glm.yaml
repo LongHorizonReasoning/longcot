@@ -1,0 +1,16 @@
+# OpenRouter - GLM 4.5
+provider: "openrouter"
+api_key: ${OPENROUTER_API_KEY}
+model: "z-ai/glm-4.5"
+timeout: 10000.0
+
+headers:
+  HTTP-Referer: "http://localhost"
+  X-Title: "lhr-dataset"
+
+num_workers: 8
+max_retries: 2
+
+llm_kwargs:
+  max_completion_tokens: 120000
+  reasoning_effort: "high"

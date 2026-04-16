@@ -1,0 +1,15 @@
+# OpenAI direct API
+provider: "openai"
+api_key: ${OPENAI_API_KEY}
+model: "gpt-5.2"
+timeout: 10000.0
+
+num_workers: 8
+max_retries: 2
+
+llm_kwargs:
+  max_output_tokens: 125000
+  reasoning:
+    effort: "high"
+  text:
+    verbosity: "medium"

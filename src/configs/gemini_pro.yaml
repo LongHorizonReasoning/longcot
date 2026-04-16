@@ -1,0 +1,12 @@
+# Google Gemini direct API
+provider: "gemini"
+api_key: ${GEMINI_API_KEY}
+model: "gemini-3.1-pro"
+timeout: 10000
+
+num_workers: 8
+max_retries: 2
+
+llm_kwargs:
+  config:
+    max_output_tokens: 62500

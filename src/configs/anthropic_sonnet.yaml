@@ -1,0 +1,11 @@
+# Anthropic direct API - Claude Sonnet 4.5
+provider: "anthropic"
+api_key: ${ANTHROPIC_API_KEY}
+model: "claude-opus-4-6"
+timeout: 10000
+
+num_workers: 8
+max_retries: 2
+
+llm_kwargs:
+  max_tokens: 64000

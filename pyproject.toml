@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "longcot"
+version = "0.1.0"
+description = "Long-Horizon Reasoning Dataset for LLM Evaluation"
+requires-python = ">=3.10"
+dependencies = [
+    "rdkit",
+    "chess",
+    "sympy",
+    "pyyaml",
+    "openai>=1.0.0",
+    "anthropic>=0.20.0",
+    "google-genai>=0.3.0",
+]
+
+[tool.setuptools]
+package-dir = {"longcot" = "src"}
+packages = ["longcot", "longcot._verify", "longcot._verify.logic"]
+
+[tool.setuptools.package-data]
+"longcot" = ["data/**/*.json", "configs/*.yaml"]
