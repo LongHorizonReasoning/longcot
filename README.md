@@ -39,7 +39,7 @@ LongCoT uses [uv](https://docs.astral.sh/uv/) for dependency management. Install
 uv sync
 ```
 
-This creates a local `.venv`, installs LongCoT in editable mode, and pulls in all runtime dependencies (including the OpenAI, Anthropic, and Google GenAI SDKs used by the inference CLI) pinned to `uv.lock`.
+This creates a local `.venv`, installs LongCoT in editable mode, and pulls in all runtime dependencies (including the OpenAI, Anthropic, and Google GenAI SDKs used by the inference CLI) pinned to `uv.lock`. Pass `--no-dev` if you want to skip the test dependencies.
 
 Run commands inside the environment with `uv run` (e.g. `uv run python run_inference.py ...`), or activate the venv manually with `source .venv/bin/activate`.
 
@@ -146,6 +146,18 @@ correct = longcot.verify(q, response_text, options=options)
 ```
 
 All domains use `solution = ...` as the answer format; per-question prompts spell out the expected shape of the value.
+
+## Submissions
+
+We welcome community submissions to the LongCoT leaderboard.
+
+To submit results:
+
+1. Evaluate your model on the full benchmark using the default evaluation settings.
+2. Include your model name, provider, and per-question outputs in a results file.
+3. Open a pull request on the benchmark repository with the results and enough information for us to reproduce the run.
+
+We verify submissions before adding them to the leaderboard.
 
 ## Authors
 
