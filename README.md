@@ -157,6 +157,19 @@ To submit results:
 2. Include your model name, provider, and per-question outputs in a results file.
 3. Open a pull request on the benchmark repository with the results and enough information for us to reproduce the run.
 
+Example submission format:
+
+```json
+{
+  "model": "Your Model Name",
+  "provider": "Your Organisation",
+  "type": "open|closed",
+  "results": [
+    {"question_id": "Sudoku_easy_1", "response": "...", "correct": true}
+  ]
+}
+```
+
 We verify submissions before adding them to the leaderboard.
 
 ## Authors
